@@ -14,13 +14,13 @@ func main() {
 	fmt.Printf("A Magician will pick a secret number between 1 to 100 and put it in his hat.\nYou guess what number it is.\nIf your guess is too high or too low, a Magician will give you a hint.\nYou have %v attempts to win!\n", MAX_ATTEMPTS)
 	isPlay := true
 	for isPlay {
-		playgame()
+		playGame()
 		isPlay = evaluatePlayAgain()
 	}
 	fmt.Println("Good bye!!!")
 }
 
-func playgame() {
+func playGame() {
 	attempts, userNumber := 1, 0
 	number := rand.Intn(100)
 	for attempts <= MAX_ATTEMPTS {
